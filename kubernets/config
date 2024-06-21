@@ -1,0 +1,63 @@
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJS3lTT3V1S3QyM1V3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRBMk1qRXdNREV6TWpOYUZ3MHpOREEyTVRrd01ERTRNak5hTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUNxK09keVdrNmhlZ0dvTVRiNjZWSWUvNUM3T05zenZZSEZzNjJzaEFBUDJ3TCtCS1pFWTBrZWlwa2wKRXdDTnhRVVl2VGFEOVM5TE1DcFdGZnQ2S3BvUFBVdXQ0VkxlMU1Udkl1T0hXYjdBamJTRWJlcXlGT1VFMkFJcQpkZUp2cGdoeWQrUWY0THNsL2RySXArSzk4NHlUVWp3YWVLbC90NmxkL0xQSWFqNHhCajVzdnp5Q0twOHhWcU11CmEwQy95YjFuejZlTzBHcFBhWWI1Vk5aaW9kMzRJTlJXOEo0MWsvN0UzZ0o3U1JKVVBLeFlqNEY2VEtXUnNsQjYKRE9oNUwxeEJBdGFuZHpwWjdtZ0F5WHAzVW8xdGd1TE4veXZLVFZQQ2JUMmhwNGJRNHlFQUJiQlRQemVvMTFEUwpnbXZTN1pEQ2E5NzlqR3VPaG5sQWpmNUFQNk9YQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSOXBiYjEvT0h3aXAwdFp3VW9DcklmUXM4U0xqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQTIzaXVoNU1oWQpLV2NJR2dXVVZucXBHNytGNTlRVDBZKzROTjhHaHNUMmhiUWRWdmk1dWkxSzFWcUtEOXJnTVJIbnUvcCs5WlJnCnpEb2g1eHQyUkUwS095RU1pY05zZnNHa1VqUjMxUitWTVhWMURLNmJBUUF3MTJlV2pCMVZ4QXRYRVViV2dsc0gKWWlsaXovbnZUVWtyUUN2RU42Zi9HVE56RlFRQldhTTg3SHNoRGdkMHVQSWFRbVFOMFB1RW1aMTdHck9iY01sMgpZSzF2VkFmZy9NQmw2SENXdEFhN1dKMHhzZTBSa2dEb3lBbEFjbjZ3MVR3Rm0rMUF0REhtZXliSDRGVkNUUmVyCndjSkdZanRlNm44VWtIL1UyRG9xQ0lVbTQyK3R6VUF3dFdqdzNhUUVDdnNBQURoUWhSYkxJWCs0OUREWCtLUXQKcFQxN1Q2Y0xJVkY4Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://1009E723E3F7E082BDAD38A0938767F9.gr7.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:891377321093:cluster/contenedores-Actividad3
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJZVJSMG1Na21kY2N3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRBMk1qQXdNRFE0TVROYUZ3MHpOREEyTVRnd01EVXpNVE5hTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUUNrcGExZGZxNlE2TE9ESTdxdXZPMUplZUZCajNSTVEwa1JwU2RRMk5aL0RHUVB3Z2JrcG5IcnlSMkMKVWxMYTk1QVRheEE1VVZpbTEzM1J1UHVrMFhnWG9sVHp2WktSTTVhM0lsZ1dlYmRWeHdDcGIrU2s0SUFJdTJHUwpQSnNRUDlpb1hVVytJTWlodExmK0ZDTlNVVElPaysxMFQ5dU5RQk92SjFWNUtNVzhWRkpnT2xBOHg4RVBpd1VjCm0zZVpUQUpiLzkyRGJsNjFFRmdxQ096U3k1MVFxUlNDOVZDM1hyajFrS1prYjRTb0JMQXRuTHZpaU5IcWdUMVEKNEFsWkxLTjdoazNMZExFUEVHM2RZelBoMGZabU5ndGtqbDBJYXlpYm1QSXVMWlF0NERDUjBpbFNET28zMXF0aApoQldWZTJlUHZ5andNV01VSzJpMGF0Z2tGdTZ4QWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJRYnNtbUdxbndQcU5PdTdJWHRrZ2hqOUFndklEQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQmxJUEpWTCs1WApnVDFoVHlkZFRBOFNHbFdnK0lWamhhTk8vRFREekN4d1E3VHZwVC9GMlIxN2xnLzU5bnZ4VkRWd3hQMXJhNFlkClZFcm9jT1RHM2J1RjRhbVQzZTk2d21UbUJHODhOUE8vR3hHRlcxWEgrY1gxdE80N3lQT0drVUcvSm1CL1pONkEKMithbUx3L3E2UXZ0MDNmVE9pNXBTM3NvUDFwTVRWMVlMRXIvNTdvSEJYc0lpeFdFbzFjMXZmOTMrcUpLb3dUNQpCV2xtZDc4bTNFZnc4NVIrZ0VFVzYyd0VETUU1Q29reGt5K1lhRURkRTFIL0NwQUVpL3Z4N2tkVXVlOHl3cmluCkJXWVlaemFLZURwRjM1RmhkQmdKaERQUWNoZjNPS1ZjVVVUVHY4Q1gvRm9sNkdCeXFxSEhob0V3Z3NUcnpIOC8KTGtqdXpwVmtzNjluCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    server: https://8D6B2F1AADAB9CB081CBD183F91DCA04.yl4.us-east-1.eks.amazonaws.com
+  name: arn:aws:eks:us-east-1:891377321093:cluster/contenedoresActividad3
+contexts:
+- context:
+    cluster: arn:aws:eks:us-east-1:891377321093:cluster/contenedores-Actividad3
+    namespace: app-js
+    user: arn:aws:eks:us-east-1:891377321093:cluster/contenedores-Actividad3
+  name: arn:aws:eks:us-east-1:891377321093:cluster/contenedores-Actividad3
+- context:
+    cluster: arn:aws:eks:us-east-1:891377321093:cluster/contenedoresActividad3
+    namespace: app-js
+    user: arn:aws:eks:us-east-1:891377321093:cluster/contenedoresActividad3
+  name: arn:aws:eks:us-east-1:891377321093:cluster/contenedoresActividad3
+- context:
+    cluster: contenedores-Actividad3
+    user: JulianAguirre_UNIR
+  name: container-context
+current-context: arn:aws:eks:us-east-1:891377321093:cluster/contenedores-Actividad3
+kind: Config
+preferences: {}
+users:
+- name: arn:aws:eks:us-east-1:891377321093:cluster/contenedores-Actividad3
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - contenedores-Actividad3
+      - --output
+      - json
+      command: aws
+      env: null
+      interactiveMode: IfAvailable
+      provideClusterInfo: false
+- name: arn:aws:eks:us-east-1:891377321093:cluster/contenedoresActividad3
+  user:
+    exec:
+      apiVersion: client.authentication.k8s.io/v1beta1
+      args:
+      - --region
+      - us-east-1
+      - eks
+      - get-token
+      - --cluster-name
+      - contenedoresActividad3
+      - --output
+      - json
+      command: aws
+      env: null
+      interactiveMode: IfAvailable
+      provideClusterInfo: false

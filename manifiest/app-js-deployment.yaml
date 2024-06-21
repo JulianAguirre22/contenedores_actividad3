@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-js-deployment
+  namespace: app-js
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: app-js
+  template:
+    metadata:
+      labels:
+        app: app-js
+    spec:
+      containers:
+      - name: app-js
+        image: julianaguirre22/app_nodejs:2.0
+        ports:
+        - containerPort: 3000
+        env:
+        - name: MONGO_URI
+          value: "mongodb://mongodb:27017/"
