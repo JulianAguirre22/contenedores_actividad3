@@ -1,65 +1,38 @@
+const express = require('express');
 const axios = require('axios');
 const mongoose = require('mongoose');
-const express = require('express');
 
-// Configuración de MongoDB
-const mongoUrl = 'mongodb://mongodb:27017/nodejs-db';
+const app = express();
+const PORT = 3000;
+const MONGO_URI = 'mongodb://mongodb:27017/chistesDB'; // Cambia esto si tu configuración de MongoDB es diferente
 
-// Definición del esquema de chiste
+mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log('Conectado a MongoDB'))
+    .catch(err => console.error('Error al conectar a MongoDB:', err));
+
 const jokeSchema = new mongoose.Schema({
-  id: String,
-  joke: String,
-  status: Number
+    id: Number,
+    type: String,
+    setup: String,
+    punchline: String,
 });
-
-// Creación del modelo de chiste
 const Joke = mongoose.model('Joke', jokeSchema);
 
-// Conexión a la base de datos
-mongoose.connect(mongoUrl, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Configuración de Express
-const app = express();
-const port = 3000;
-
-// Ruta para mostrar el chiste actual
 app.get('/', async (req, res) => {
-  try {
-    const latestJoke = await Joke.findOne().sort({ _id: -1 }).exec();
-    res.json(latestJoke);
-  } catch (error) {
-    console.error('Error al obtener el chiste:', error);
-    res.status(500).json({ error: 'Error al obtener el chiste' });
-  }
+    try {
+        const response = await axios.get('https://official-joke-api.appspot.com/random_joke');
+        const chiste = response.data;
+
+        // Guarda el chiste en la base de datos
+        const newJoke = new Joke(chiste);
+        await newJoke.save();
+
+        res.json(chiste);
+    } catch (error) {
+        res.status(500).json({ error: 'Error al obtener o guardar el chiste' });
+    }
 });
 
-// Función para obtener los chistes del API y guardarlos en MongoDB
-async function getDadJokesFromAPI() {
-  try {
-    const response = await axios.get('https://icanhazdadjoke.com/', {
-      headers: {
-        'Accept': 'application/json'
-      }
-    });
-
-    const jokeData = response.data;
-
-    const newJoke = new Joke({
-      id: jokeData.id,
-      joke: jokeData.joke,
-      status: jokeData.status
-    });
-
-    await newJoke.save();
-    console.log(`Chiste guardado en la base de datos: ${jokeData.joke}`);
-  } catch (error) {
-    console.error('Error al obtener y guardar el chiste:', error);
-  }
-}
-
-// Iniciar el servidor Express
-app.listen(port, () => {
-  console.log(`Servidor iniciado en el puerto ${port}`);
-  getDadJokesFromAPI();
+app.listen(PORT, () => {
+    console.log(`Servidor escuchando en http://localhost:${PORT}`);
 });
-
